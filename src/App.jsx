@@ -66,7 +66,7 @@ function App() {
     );
   }
 
-  function editchange(id) {
+  function editChange(id) {
     setTodos(
       todos.map((todo) => {
         if (todo.id === id) {
@@ -125,9 +125,9 @@ function App() {
 
   return (
     <div className="App">
-      <div class="container">
-        <h1 class="py-3 my-3 text-primary fw-bold">REACT TODO</h1>
-        <div class="card w-50 m-auto border-success shadow p-3 mb-5 bg-body-tertiary rounded" >
+      <div className="container">
+        <h1 className="py-3 my-3 text-primary fw-bold">REACT TODO</h1>
+        <div className="card w-50 m-auto border-success shadow p-3 mb-5 bg-body-tertiary rounded" >
         <Form
           changeInput={changeInput}
           todoInput={todoInput}
@@ -137,7 +137,7 @@ function App() {
         addTodo={addTodo}
         todos={todos}
         checkToggle={checkToggle}
-        editchange={editchange}
+        editChange={editChange}
         updateTodo={updateTodo}
         deleteTodo={deleteTodo}
       />

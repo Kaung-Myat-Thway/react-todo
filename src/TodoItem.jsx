@@ -2,16 +2,16 @@ import React from 'react'
 
 export default function TodoItem(props) {
   return (
-    <li class="list-group-item my-3 border" key={props.todo.id}>
+    <li className="list-group-item my-3 border">
             <input
-            class="form-check-input float-start"
+              className="form-check-input float-start"
               type="checkbox"
               onChange={() => props.checkToggle(props.todo.id)}
               checked={props.todo.isCompleted ? true : false}
             />
             {!props.todo.isEdited ? (
               <span
-                onDoubleClick={() => props.editchange(props.todo.id)}
+                onDoubleClick={() => props.editChange(props.todo.id)}
                 className={props.todo.isCompleted ? "line" : ""}
               >
                 {props.todo.title}
@@ -32,7 +32,7 @@ export default function TodoItem(props) {
               />
             )}
 
-            <button onClick={() => props.deleteTodo(props.todo.id)} class="float-end btn btn-danger">
+            <button onClick={() => props.deleteTodo(props.todo.id)} className="float-end btn btn-danger">
               Delete
             </button>
           </li>

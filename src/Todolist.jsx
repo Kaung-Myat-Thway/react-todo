@@ -3,9 +3,10 @@ import TodoItem from "./TodoItem";
 
 export default function Todolist(props) {
   return (
-    <ul class="list-group py-2 px-5 border-0 m-0">
+    <ul className="list-group py-2 px-5 border-0 m-0">
       {props.todos.map((todo, index) => (
         <TodoItem
+          key={index}
           todo={todo}
           checkToggle={props.checkToggle}
           deleteTodo={props.deleteTodo}
